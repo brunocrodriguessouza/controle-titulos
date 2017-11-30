@@ -16,6 +16,8 @@ import javax.persistence.TemporalType;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.format.annotation.NumberFormat;
 
+import ch.qos.logback.core.status.Status;
+
 @Entity
 public class Titulo implements Serializable{
 	
@@ -69,6 +71,10 @@ public class Titulo implements Serializable{
 	}
 	public void setStatus(StatusTitulo status) {
 		this.status = status;
+	}
+	
+	public boolean isPendente() {
+		return StatusTitulo.PENDENTE.equals(this.status);
 	}
 	
 	@Override

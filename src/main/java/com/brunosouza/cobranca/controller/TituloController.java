@@ -78,6 +78,10 @@ public class TituloController {
 		return "redirect:/titulos";
 	}
 	
+	public void receber(Long id) {
+		
+	}
+	
 	@ModelAttribute("todosStatusTitulo")
 	public List<StatusTitulo> todosStatusTitulo(){
 		return Arrays.asList(StatusTitulo.values());
